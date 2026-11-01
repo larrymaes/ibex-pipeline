@@ -16,7 +16,7 @@ This is a learning project for practicing data pipelines, Python, Bash, and Git.
 - [x] Read a map file and check it against its header
 - [x] Plot an all-sky map
 - [x] Compare the same maps across releases 16 and 18
-- [ ] Run the pipeline on a schedule with cron and log the results
+- [x] Run the pipeline on a schedule with cron and log the results
 - [ ] Add a status report (last run, disk usage, errors)
 - [ ] Add GitLab CI for style checks and tests
 
