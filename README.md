@@ -14,11 +14,19 @@ This is a learning project for practicing data pipelines, Python, Bash, and Git.
 - [x] Set up the environment and repo
 - [x] Download IBEX-Hi maps from data releases 16 and 18
 - [x] Read a map file and check it against its header
-- [ ] Plot an all-sky map
+- [x] Plot an all-sky map
 - [ ] Compare the same maps across releases 16 and 18
 - [ ] Run the pipeline on a schedule with cron and log the results
 - [ ] Add a status report (last run, disk usage, errors)
 - [ ] Add GitLab CI for style checks and tests
+
+## Findings
+
+### The IBEX ribbon
+
+![IBEX-Hi all-sky map showing the ribbon](docs/ribbon_hi4.png)
+
+Fourteen years of IBEX-Hi data (2009–2022, energy step 4), centered on the heliosphere's nose. The bright arc is the IBEX ribbon, discovered by IBEX in 2009.
 
 ## Data
 
