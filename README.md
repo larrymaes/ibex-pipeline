@@ -11,8 +11,8 @@ This is a learning project for practicing data pipelines, Python, Bash, and Git.
 
 🚧 Work in progress
 
-- [ ] Set up the environment and repo
-- [ ] Download IBEX-Hi maps from data releases 16 and 18
+- [x] Set up the environment and repo
+- [x] Download IBEX-Hi maps from data releases 16 and 18
 - [ ] Read a map file and check it against its header
 - [ ] Plot an all-sky map
 - [ ] Compare the same maps across releases 16 and 18
