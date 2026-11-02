@@ -28,7 +28,6 @@ for path in sorted(Path("data").rglob("*.txt")):
             elif word.startswith("h_max="):
                 h_max = float(word[6:])
 
-
     values = []
     for line in lines[n_header:]:
         for word in line.split():
@@ -38,7 +37,7 @@ for path in sorted(Path("data").rglob("*.txt")):
     issues = []
     unobserved = (grid == 0).sum()
     if abs(grid.size - (rows * cols)) > 0.0001:
-           issues.append(f"expected {rows * cols} values, found {grid.size}")
+        issues.append(f"expected {rows * cols} values, found {grid.size}")
     if abs(grid.min() - h_min) > 0.0001:
         issues.append(f"min {grid.min():.6f} doesn't match header h_min {h_min:.6f}")
     if abs(grid.max() - h_max) > 0.0001:
@@ -54,7 +53,9 @@ for path in sorted(Path("data").rglob("*.txt")):
         print(f"OK       {name}  {grid.size} values, {unobserved} unobserved")
 
 print("-" * 80)
-print(f"Verification Complete: {total_files} files checked. {problems} problems detected.")
+print(
+    f"Verification Complete: {total_files} files checked. {problems} problems detected."
+)
 
 if problems > 0:
     print("Pipeline error status triggered due to compromised telemetry.")

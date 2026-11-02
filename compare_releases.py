@@ -2,26 +2,12 @@ from pathlib import Path
 
 import numpy as np
 
-
-def read_map(path):
-    with open(path) as f:
-        lines = f.read().splitlines()
-    parts = lines[0][2:].split(":")
-    n_header = int(parts[0])
-    shape_parts = parts[1].split("x")
-    rows = int(shape_parts[0])
-    cols = int(shape_parts[1])
-
-    values = []
-    for line in lines[n_header:]:
-        for word in line.split():
-            values.append(float(word))
-    grid = np.array(values)
-    return grid.reshape(rows, cols)
-
+from ibexmap import read_map
 
 report = []
-report.append("| File | Changed pixels | Median % change | Newly missing | Newly observed |")
+report.append(
+    "| File | Changed pixels | Median % change | Newly missing | Newly observed |"
+)
 report.append("|---|---:|---:|---:|---:|")
 
 for old_path in sorted(Path("data/release16/Hi/hvset_2009A").glob("*.txt")):
@@ -42,7 +28,9 @@ for old_path in sorted(Path("data/release16/Hi/hvset_2009A").glob("*.txt")):
     pct = 100 * (new[both] - old[both]) / old[both]
     median_pct = np.median(pct)
 
-    report.append(f"| {old_path.name} | {changed} | {median_pct:+.2f}% | {newly_missing} | {newly_observed} |")
+    report.append(
+        f"| {old_path.name} | {changed} | {median_pct:+.2f}% | {newly_missing} | {newly_observed} |"
+    )
 
 with open("docs/compare_r16_r18.md", "w") as f:
     f.write("\n".join(report) + "\n")
