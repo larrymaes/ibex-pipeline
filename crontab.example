@@ -1,2 +1,5 @@
+# IBEX pipeline: nightly run at 2:30 am
+30 2 * * * /home/larry/Projects/ibex-pipeline/run_pipeline.sh
+
 # Weekly status report, Mondays at 7:00 am
 0 7 * * 1 /home/larry/Projects/ibex-pipeline/status.sh > /home/larry/Projects/ibex-pipeline/logs/weekly_status.md
