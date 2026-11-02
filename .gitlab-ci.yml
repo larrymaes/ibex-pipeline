@@ -1,0 +1,18 @@
+image: python:3.12-slim
+
+stages:
+  - lint
+  - test
+
+ruff:
+  stage: lint
+  script:
+    - pip install ruff
+    - ruff check .
+    - ruff format --check .
+
+pytest:
+  stage: test
+  script:
+    - pip install numpy pytest
+    - pytest -v
