@@ -1,6 +1,6 @@
 # IBEX Pipeline
 
- [![pipeline status](https://gitlab.com/larrymaes/ibex-pipeline/badges/main/pipeline.svg)](https://gitlab.com/larrymaes/ibex-pipeline/-/commits/main)
+[![pipeline status](https://img.shields.io/gitlab/pipeline-status/larrymaes%2Fibex-pipeline?branch=main&label=GitLab%20CI)](https://gitlab.com/larrymaes/ibex-pipeline/-/pipelines)
 
 IBEX Pipeline downloads public sky maps from NASA's Interstellar Boundary Explorer (IBEX),
 checks each file for problems, plots the maps, and reports what changed between two data
