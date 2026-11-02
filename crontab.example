@@ -1,0 +1,2 @@
+# Weekly status report, Mondays at 7:00 am
+0 7 * * 1 /home/larry/Projects/ibex-pipeline/status.sh > /home/larry/Projects/ibex-pipeline/logs/weekly_status.md
