@@ -37,7 +37,7 @@ echo
 echo "## Problems in the logs (last 7 days)"
 recent=$(find logs -name 'pipeline_*.log' -mtime -7)
 if [ -n "$recent" ]; then
-    # shellcheck disable=SC2086
+    # shellcheck disable=SC2086,SC2126
     fails=$(grep -h "FAILED" $recent | wc -l)
     echo "- $fails failed run(s)"
     # shellcheck disable=SC2086
